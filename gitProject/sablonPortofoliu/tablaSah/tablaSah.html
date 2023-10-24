@@ -1,0 +1,162 @@
+<style>
+
+    .patrat
+    {
+        width: 100px;
+        height: 100px;
+        
+        text-align: center;
+    }
+
+    .alb
+    {
+        background-color: #765827;
+    }
+
+    .negru
+    {
+        background-color: #C8AE7D;
+    }
+
+    .chessTable
+    {
+        display: flex;
+        flex-direction: column;
+
+        width: 800px;
+        height: 800px;
+
+        border:1px solid black;
+
+        margin: auto;
+    }
+
+    .rand
+    {
+        display: flex;
+        flex-direction: row;
+    }
+
+   img
+   {
+        width: 45px;
+        height: 80px;
+   }
+
+   .calNegruChangeSide
+   {
+        transform: scaleX(-1) ;
+   }
+
+   .calAlbChangeSide
+   {
+        transform: scaleX(-1) ;
+   }
+</style>
+
+
+    <div class="chessTable">
+
+        <div class="rand">
+
+            <div class="patrat alb"><img draggable="true" src="images/pieseAlbe/turaAlb.png" alt=""></div>
+            <div class="patrat negru"><img draggable="true" src="images/pieseAlbe/calAlb.png" alt=""></div>
+            <div class="patrat alb"><img draggable="true" src="images/pieseAlbe/nebunAlb.png" alt=""></div>
+            <div class="patrat negru"><img draggable="true" src="images/pieseAlbe/reginaAlb.png" alt=""></div>
+            <div class="patrat alb"><img draggable="true" src="images/pieseAlbe/regeAlb.png" alt=""></div>
+            <div class="patrat negru"><img draggable="true" src="images/pieseAlbe/nebunAlb.png" alt=""></div>
+            <div class="patrat alb"><img draggable="true" class="calAlbChangeSide" src="images/pieseAlbe/calAlb.png" alt=""></div>
+            <div class="patrat negru"><img draggable="true" src="images/pieseAlbe/turaAlb.png" alt=""></div>
+
+        </div>
+        <div class="rand">
+
+            <div class="patrat negru"><img draggable="true" src="images/pieseAlbe/pionAlb.png" alt=""></div>
+            <div class="patrat alb"><img draggable="true" src="images/pieseAlbe/pionAlb.png" alt=""></div>
+            <div class="patrat negru"><img draggable="true" src="images/pieseAlbe/pionAlb.png" alt=""></div>
+            <div class="patrat alb"><img draggable="true" src="images/pieseAlbe/pionAlb.png" alt=""></div>
+            <div class="patrat negru"><img draggable="true" src="images/pieseAlbe/pionAlb.png" alt=""></div>
+            <div class="patrat alb"><img draggable="true" src="images/pieseAlbe/pionAlb.png" alt=""></div>
+            <div class="patrat negru"><img draggable="true" src="images/pieseAlbe/pionAlb.png" alt=""></div>
+            <div class="patrat alb"><img draggable="true" src="images/pieseAlbe/pionAlb.png" alt=""></div>
+
+        </div>
+        <div class="rand">
+
+            <div class="patrat alb"></div>
+            <div class="patrat negru"></div>
+            <div class="patrat alb"></div>
+            <div class="patrat negru"></div>
+            <div class="patrat alb"></div>
+            <div class="patrat negru"></div>
+            <div class="patrat alb"></div>
+            <div class="patrat negru"></div>
+
+        </div>
+        <div class="rand">
+
+            <div class="patrat negru"></div>
+            <div class="patrat alb"></div>
+            <div class="patrat negru"></div>
+            <div class="patrat alb"></div>
+            <div class="patrat negru"></div>
+            <div class="patrat alb"></div>
+            <div class="patrat negru"></div>
+            <div class="patrat alb"></div>
+
+        </div>
+        <div class="rand">
+
+            <div class="patrat alb"></div>
+            <div class="patrat negru"></div>
+            <div class="patrat alb"></div>
+            <div class="patrat negru"></div>
+            <div class="patrat alb"></div>
+            <div class="patrat negru"></div>
+            <div class="patrat alb"></div>
+            <div class="patrat negru"></div>
+
+        </div>
+        <div class="rand">
+
+            <div class="patrat negru"></div>
+            <div class="patrat alb"></div>
+            <div class="patrat negru"></div>
+            <div class="patrat alb"></div>
+            <div class="patrat negru"></div>
+            <div class="patrat alb"></div>
+            <div class="patrat negru"></div>
+            <div class="patrat alb"></div>
+
+        </div>
+        <div class="rand">
+
+            <div class="patrat alb"><img draggable="true" id="pionNegruUnu" src="images/pieseNegre/pionNegru.png" draggable="
+                true" alt=""></div>
+            <div class="patrat negru"><img draggable="true" id="pionNegruDoi" src="images/pieseNegre/pionNegru.png" alt=""></div>
+            <div class="patrat alb"><img draggable="true" id="pionNegruTrei" src="images/pieseNegre/pionNegru.png" alt=""></div>
+            <div class="patrat negru"><img draggable="true" id="pionNegruPatru" src="images/pieseNegre/pionNegru.png" alt=""></div>
+            <div class="patrat alb"><img draggable="true" id="pionNegruCinci" src="images/pieseNegre/pionNegru.png" alt=""></div>
+            <div class="patrat negru"><img draggable="true" id="pionNegruSase" src="images/pieseNegre/pionNegru.png" alt=""></div>
+            <div class="patrat alb"><img draggable="true" id="pionNegruSapte" src="images/pieseNegre/pionNegru.png" alt=""></div>
+            <div class="patrat negru"><img draggable="true" id="pionNegruOpt" src="images/pieseNegre/pionNegru.png" alt=""></div>
+        </div>
+        <div class="rand">
+
+            <div class="patrat negru"><img draggable="true" src="images/pieseNegre/turaNeagra.png" alt=""></div>
+            <div class="patrat alb"><img draggable="true" src="images/pieseNegre/calNegru.png" alt=""></div>
+            <div class="patrat negru"><img draggable="true" src="images/pieseNegre/nebunNegru.png" alt=""></div>
+            <div class="patrat alb"><img draggable="true" src="images/pieseNegre/reginaNegru.png" alt=""></div>
+            <div class="patrat negru"><img draggable="true" src="images/pieseNegre/regeNegru.png" alt=""></div>
+            <div class="patrat alb"><img draggable="true" src="images/pieseNegre/nebunNegru.png" alt=""></div>
+            <div class="patrat negru"><img draggable="true" class="calNegruChangeSide" src="images/pieseNegre/calNegru.png" alt=""></div>
+            <div class="patrat alb"><img draggable="true" src="images/pieseNegre/turaNeagra.png" alt=""></div>
+
+        </div>
+    </div>
+
+<script>
+
+
+
+</script>
