@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Quiz.js</title>
+    <style>
+        body {
+            margin: 1rem auto;
+            padding: 3rem;
+            font-family: sans-serif;
+        }
+        header {
+            width: 50%;
+            margin: 1em auto;
+        }
+        main {
+            min-width: 25rem;
+            max-width: 50%;
+            margin: 0px auto;
+            display:flex; 
+            flex-direction: column;
+        }
+        #statement {
+            border: 1px solid black;
+            border-radius: 0.5rem;
+            box-shadow: 5px 5px 5px gray;
+            padding: 1rem;
+            font-size: x-large;
+            text-align: center;
+            margin: 1rem 0px;
+            min-height: 2em;
+        }
+        #explanation {
+            padding: 1rem;
+            text-align: center;
+        }
+        #options {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        button {
+            padding: 0.5rem;
+            font-size: medium;
+            border-radius: 5px;
+        }
+        .correct {
+            background-color: lightgreen;
+        }
+        .incorrect {
+            background-color: lightpink;
+        }
+    </style>
+  </head>
+  <body>
+    <header>
+    <h1>Quiz.js</h1>
+    <p>Do you know JS? Find out!</p>
+    </header>
+
+    <main>
+    <div id="statement">
+        
+    </div>
+
+    <div id="options">
+        <button name="true" value="true">true</button>
+        <button name="false" value="false">false</button>
+        <button name="nextQuestion">next question</button>
+    </div>
+
+    <div id="explanation">
+
+    </div>
+
+    </main>
+
+  
+
+  <script type="text/javascript">
+
+    let explanationDiv = document.getElementById("explanation");
+
+    let headerOne = document.getElementsByTagName('h1');
+
+    headerOne = headerOne[0];
+
+    let statement = document.getElementById("statement");
+
+    const optionsButton = document.getElementById("options").children;
+
+    let fact = [
+    {
+        statement: 'Ana are mere?',
+
+        answearTrue: true,
+
+        explanation: 'Ana trebuie sa aiba mere',
+    },
+
+    {
+        statement: 'Ana are pere?',
+
+        answearTrue: true,
+
+        explanation: 'Ana trebuie sa aiba pere',
+    },
+
+    {
+        statement: 'Ana are pere?',
+
+        answearTrue: false,
+
+        explanation: 'Ana nu trebuie sa aiba pere',
+    },
+
+    {
+        statement: 'Ana are caise?',
+
+        answearTrue: false,
+
+        explanation: 'Ana nu trebuie sa aiba caise',
+    }
+]
+    statement.textContent = fact[0].statement ;
+
+    const firstButton = optionsButton[0] ;
+    const secondButton = optionsButton[1] ;
+    const nextButton = optionsButton[2];
+
+    function disable(x)
+    {
+        x.setAttribute('disabled',true);
+
+    };
+    
+    function enable(x)
+    {
+        x.removeAttribute('disabled');
+    };
+
+
+            let explanation = document.getElementById('explanation');
+
+            for (let i = 0 ; i < 1 ; i++)
+            {
+                firstButton.addEventListener('click', function()
+                {
+                    explanation.textContent = fact[0].statement;
+
+                    firstButton.textContent = firstButton.textContent.toUpperCase();
+
+                    disable(firstButton);
+                    disable(secondButton);
+
+                    firstButton.classList.add('correct');
+                    
+                    return true; ;
+                }
+                );          
+                
+                secondButton.addEventListener('click', function()
+                {
+                    explanation.textContent = fact[0].explanation;
+
+                    secondButton.textContent = secondButton.textContent.toUpperCase();
+
+                    secondButton.classList.add('incorrect');
+
+                    disable(firstButton);
+                    disable(secondButton);
+
+                    return false ;
+                }
+                )
+
+                nextButton.addEventListener('click', function()
+                {
+                    statement.textContent = fact[1].statement;
+                });
+            };
+
+
+    headerOne.addEventListener('mouseover', function()
+    {
+        headerOne.textContent = 'HOVER';
+    }
+    );
+
+    headerOne.addEventListener('mouseleave', function()
+    {
+        headerOne.textContent = 'Quiz.js';
+    }
+    );
+
+
+    let firstName = 'Tudor' ;
+    let lastName = 'Ioan Alexandru' ;
+
+    if(firstName.length > lastName.length)
+    {
+        console.log('first name is longer')
+    } 
+    else
+    {
+        if(firstName.length < lastName.length)
+        {
+            console.log('last name is longer');
+        }
+    };
+
+    let array = [1,2,3];
+
+    function isEmpty(array)
+    {
+        if(array.length === 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    } 
+console.log(array);
+
+console.log(isEmpty(array));    
+
+setTimeout( function()
+
+    {
+        console.log('1 second timeout');
+    }
+
+    ,1000);
+  </script>
+
+</body></html>
